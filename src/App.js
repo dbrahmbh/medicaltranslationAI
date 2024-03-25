@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TranslateInput from './TranslateInput';
+import TranslateOutput from './TranslateOutput';
 
 function App() {
+  const [translatedText, setTranslatedText] = useState('');
+
+  const handleTranslation = (text) => {
+    // Here you would integrate with the ChatGPT API to translate the text
+    console.log('Translating text:', text);
+    // For now, we just mimic the translation process
+    setTranslatedText(text); // Replace this with actual translation logic
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <TranslateInput onTranslate={handleTranslation} />
+        <TranslateOutput translatedText={translatedText} />
       </header>
     </div>
   );
 }
 
 export default App;
+
