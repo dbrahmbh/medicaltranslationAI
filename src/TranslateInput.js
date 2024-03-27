@@ -16,6 +16,7 @@ function TranslateInput({ onTranslate }) {
           onChange={(e) => setText(e.target.value)}
           placeholder="Enter text to translate"
         />
+        <br/>
         <button type="submit">Translate</button>
       </form>
     </div>
