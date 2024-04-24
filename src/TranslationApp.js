@@ -145,7 +145,7 @@ function TranslationApp() {
     const [translatedText, setTranslatedText] = useState('');
     const [error, setError] = useState(null);
 
-    const apiKey = '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';
+    const apiKey = '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';
     const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
     const handleInputChange = (e) => {
